@@ -18,15 +18,11 @@ puts "Welcome to Tic Tac Toe!"
 class Board 
     attr_accessor :board
     def initialize(grid_size)
-        @board = Array.new(grid_size) { Array.new(grid_size," - ") }
         if grid_size.is_a? Integer
-
-            puts "Welcome to Tic Tac Toe!"
-            puts self.board
+            @board = Array.new(grid_size) { Array.new(grid_size," - ") }
         else
             raise ArgumentError, "Please enter an integer"
         end
-
     end    
 end
 
