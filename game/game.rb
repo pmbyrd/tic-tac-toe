@@ -1,3 +1,4 @@
+require 'readline'
 # Tic Tac Toe Game Logic
 # *First I will create a board for the game
 # This class is responsible for the board
@@ -7,6 +8,7 @@
 # This class is responsible for the game logic and state
 # Module needed for messages
 # Module needed for checking a winner
+
 puts "Welcome to Tic Tac Toe!"
 # RSpec.describe 'Nested Array Exercises' do
 #     describe 'blank seating chart creation exercise' do
@@ -20,14 +22,41 @@ class Board
     def initialize(grid_size)
         if grid_size.is_a? Integer
             @board = Array.new(grid_size) { Array.new(grid_size," - ") }
+            puts "The board is #{@board}"
         else
             raise ArgumentError, "Please enter an integer"
         end
     end    
 end
 
-board = Board.new(3)
-board = Board.new("a")
+# make a function asking for a new board
+def create_board
+    puts "How big would you like the board to be?"
+    # create a prompt from the user
+    grid_size = Readline.readline("> ")
+    board = Board.new(Readline.readline(grid_size))
+    puts board.board
+end
 
-puts board.board
+# Todo expand messages module
+module Messages
+    def welcome_message
+        puts "Welcome to Tic Tac Toe!"
+    end
+end
+
+# Todo create a module for a who does first
+
+# Todo module for getting input
+
+# Todo module for checking a winner
+
+# Todo module for checking a draw
+
+# Todo create a player class
+
+# Todo create a computer class
+
+# Todo create a game class
+
 

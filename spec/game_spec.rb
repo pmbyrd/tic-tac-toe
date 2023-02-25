@@ -17,3 +17,19 @@ RSpec.describe 'Game' do
  end
  
 end
+# Write test for all theses imported comments
+# STARTING HERE
+# Todo create a module for a who does first
+
+# Todo module for getting input
+
+# Todo module for checking a winner
+
+# Todo module for checking a draw
+
+# Todo create a player class
+
+# Todo create a computer class
+
+# Todo create a game class
+# END HERE
