@@ -54,6 +54,47 @@ end
 # Todo module for checking a draw
 
 # Todo create a player class
+class Player 
+    attr_accessor :marker
+    def initialize(marker)
+        @marker = "X"
+    end
+end
+
+# Todo create a computer class
+class Computer 
+    attr_accessor :marker
+    def initialize(marker)
+        @marker = "O"
+    end
+end
+
+# Todo create a game class
+
+
+# Todo create a module for a who does first
+
+# Todo module for getting input
+
+# Todo module for checking a winner
+
+# Todo module for checking a draw
+
+# Todo create a player class
+
+# Todo create a computer class
+
+# Todo create a game class
+
+# Todo create a module for a who does first
+
+# Todo module for getting input
+
+# Todo module for checking a winner
+
+# Todo module for checking a draw
+
+# Todo create a player class
 
 # Todo create a computer class
 
