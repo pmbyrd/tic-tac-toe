@@ -21,7 +21,7 @@ class Board
     attr_accessor :board
     def initialize(grid_size)
         if grid_size.is_a? Integer
-            @board = Array.new(grid_size) { Array.new(grid_size," - ") }
+            @board = Array.new(grid_size) { Array.new(grid_size,' - ')}
             puts "The board is #{@board}"
         else
             raise ArgumentError, "Please enter an integer"
