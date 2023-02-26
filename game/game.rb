@@ -43,6 +43,40 @@ module Messages
     def welcome_message
         puts "Welcome to Tic Tac Toe!"
     end
+    def coin_toss_message
+        puts "The coin has been tossed!"
+    end
+    def player_turn_message
+        puts "It is your turn!"
+    end
+    def computer_turn_message
+        puts "It is the computer's turn!"
+    end
+    def player_wins_message
+        puts "You win!"
+    end
+    def computer_wins_message
+        puts "The computer wins!"
+    end
+    def draw_message
+        puts "It's a draw!"
+    end
+    def play_again_message
+        puts "Would you like to play again?"
+    end
+    def goodbye_message
+        puts "Goodbye!"
+    end
+    def invalid_input_message
+        puts "Invalid input!"
+    end
+    def play_game_message
+        puts "Would you like to play a game?"
+    end
+    def yes_no_message
+        puts "Please enter yes or no"
+    end
+
 end
 
 # Todo create a module for a who does first
@@ -83,6 +117,17 @@ module CoinToss
 end
 
 # Todo module for getting input
+module GetPlayerInput
+    include Messages
+    def get_player_answer(answer, count=0)
+        if count == 0
+            play_game_message() 
+        else
+            play_again_message()
+        end
+        return answer = Readline.readline("> ")
+    end
+end
 
 # Todo module for checking a winner
 

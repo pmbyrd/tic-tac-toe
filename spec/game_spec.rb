@@ -52,11 +52,24 @@ RSpec.describe 'Game' do
             expect(coin_toss).to eq("player").or eq("computer")
         end
     end
+ 
+    describe 'Get player input' do
+        include(GetPlayerInput)
+        it 'should return a string' do
+            expected_output = "yes" or "no"
+            expect(get_player_answer(expected_output)).to eq(expected_output).or eq(expected_output)
+        end 
+        # it 'should return a number' do
+        #     expected_output = 1 || 2 || 3 || 4 || 5 || 6 || 7 || 8 || 9
+        #     expect(get_player_move).to eq(expected_output)
+        # end
+        # it 'should raise an error if the input is not a number' do
+        #     expect { get_player_move("a") }.to raise_error(ArgumentError)
+        # end
+    end
 end
 
-# Todo create a module for a who does first
 
-# Todo module for getting input
 
 # Todo module for checking a winner
 
