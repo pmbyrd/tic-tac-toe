@@ -43,7 +43,14 @@ RSpec.describe 'Game' do
             expected_output = "O"
             expect(@computer.marker).to eq(expected_output)
         end
+    end
 
+    describe 'Coin Toss' do
+        include(CoinToss)
+
+        it 'should randomly pick a player to go first' do
+            expect(coin_toss).to eq("player").or eq("computer")
+        end
     end
 end
 

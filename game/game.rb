@@ -73,6 +73,14 @@ end
 
 
 # Todo create a module for a who does first
+module CoinToss
+    def coin_toss
+        players = ["player", "computer"]
+        first = players.sample
+        puts "The #{first} goes first"
+        return first
+    end
+end
 
 # Todo module for getting input
 
