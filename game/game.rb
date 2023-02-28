@@ -4,6 +4,7 @@ require 'readline'
 puts "Welcome to Tic Tac Toe!"
 
 class Board 
+    include BoardFunctions
     attr_accessor :board
     def initialize(grid_size)
         if grid_size.is_a? Integer
@@ -15,31 +16,43 @@ class Board
     end    
 end
 
-readline = Readline.readline("> ").to_i
-puts Board.new(readline).board
-# # make a function asking for a new board
-# def create_board
-#     puts "How big would you like the board to be?"
-#     # create a prompt from the user
-#     grid_size = Readline.readline("> ")
-#     board = Board.new(Readline.readline(grid_size))
-#     puts board.board
-# end
+Board.initialize(3)
+
+# make a function asking for a new board
+module BoardFunctions
+
+    def create_board
+        puts "How big would you like the board to be?"
+        # create a prompt from the user
+        grid_size = Readline.readline("> ")
+        board = Board.new(Readline.readline(grid_size))
+        return board
+    end
+
+    def display_board
+        board = create_board()
+        puts board.length
+        # put a breakpoint
+        
+    end
+end
+
+BoardUtilities.display_board()
 
 
-# class Player 
-#     attr_accessor :marker
-#     def initialize(marker)
-#         @marker = "X"
-#     end
-# end
+class Player 
+    attr_accessor :marker
+    def initialize(marker)
+        @marker = "X"
+    end
+end
 
-# class Computer 
-#     attr_accessor :marker
-#     def initialize(marker)
-#         @marker = "O"
-#     end
-# end
+class Computer 
+    attr_accessor :marker
+    def initialize(marker)
+        @marker = "O"
+    end
+end
 
 # # Todo create a game class
 
