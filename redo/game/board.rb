@@ -19,9 +19,5 @@ class Board
 end
 
 
-board = Board.new(3)
-board.enumerate_board
-board.display_board
-board.update_board
 
 
