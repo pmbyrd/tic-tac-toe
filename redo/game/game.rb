@@ -24,8 +24,12 @@ class Game
         @board.enumerate_board
         @board.display_board
     end
+
 end
 
 
 tic_tac_toe = Game.new
 p tic_tac_toe.player1.marker
+p tic_tac_toe.player2.marker
+tic_tac_toe.check_winner
+tic_tac_toe.board.update_board(tic_tac_toe.board, tic_tac_toe.player1.get_player_input, tic_tac_toe.player1.marker)
