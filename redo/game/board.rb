@@ -1,5 +1,7 @@
 # Create a board for tic tac toe
+require_relative 'game_modules'
 class Board 
+    include GameModules
     attr_accessor :board
     def initialize(board_size)
         @board = Array.new(board_size) { Array.new(board_size, "-")}
@@ -20,5 +22,6 @@ end
 board = Board.new(3)
 board.enumerate_board
 board.display_board
+board.update_board
 
 
