@@ -24,12 +24,19 @@ class Game
         @board.enumerate_board
         @board.display_board
     end
-
 end
 
 
 tic_tac_toe = Game.new
+board = tic_tac_toe.board.board
 p tic_tac_toe.player1.marker
 p tic_tac_toe.player2.marker
-tic_tac_toe.check_winner
-tic_tac_toe.board.update_board(tic_tac_toe.board, tic_tac_toe.player1.get_player_input, tic_tac_toe.player1.marker)
+puts
+tic_tac_toe.check_tie(board)
+puts
+p board
+puts
+p board.include?(1)
+#The board needs to be flattened to check for numbers
+p board.flatten.include?(2)
+p player1.get_player_input

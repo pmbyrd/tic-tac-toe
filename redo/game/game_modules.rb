@@ -7,10 +7,16 @@ module GameModules
     #If there is no winner, continue the game
     puts "Checking for a winner"
   end
-    def check_tie
+    def check_tie(board)
         #Check if there is a tie
         #If there is a tie, display the tie
         #If there is no tie, continue the game
+        unless board.include?(Numeric) && winner == false
+            puts "Continue the game"
+            puts board.include?(Numeric)
+        else
+            puts "It's a tie!"
+        end
         puts "Checking for a tie"
     end
     def play_game
@@ -22,8 +28,13 @@ module GameModules
         #*While there is no winner or tie, continue the game that is how the game loop will be implemented
         puts "Playing the game"
     end
-  
-    
+    def check_winning_combo
+        #Check for a winning combination
+        #If there is a winning combination, display the winning combination
+        #If there is no winning combination, continue the game
+        puts "Checking for a winning combination"
+        
+    end
 end
 
 module BoardModules
@@ -42,5 +53,12 @@ module PlayerModules
     end
     def add_selection(player_selection)
         @selections << player_selection
+    end
+    def check_selection(player_selection)
+        #Check if the player's input is valid
+        #If the player's input is valid, update the board
+        #If the player's input is invalid, ask for a new input
+        puts "Checking if the player's input is valid"
+        
     end
 end
